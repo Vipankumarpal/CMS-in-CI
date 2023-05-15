@@ -3,12 +3,14 @@
 	 
 	 class Admin extends CI_Controller{
 
-	 	public function index(){
-	 		$this->load->view('Admin/login');
-	 	}
 
 	 	public function dashboard(){
 	 		$this->load->view('Admin/dashboard');
 	 	}
+
+	 	function signOut(){
+            $this->session->unset_userdata('user');
+            redirect(base_url().'login');
+        }
 	 }
 ?>

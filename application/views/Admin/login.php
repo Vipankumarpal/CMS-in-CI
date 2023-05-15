@@ -22,21 +22,31 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login Panel</h3></div>
                                     <div class="card-body">
-                                        <form>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="" type="text" placeholder="John Doe" />
-                                                <label for="Username">Username</label>
+
+                                         <?php $errorMsg = $this->session->userdata('errorMsg'); ?>
+                                            <?php if(!empty($errorMsg)){ ?>
+
+
+                                            <div class="alert alert-danger" role="alert">
+                                               <?php echo $errorMsg; ?>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="password" type="password" placeholder="Password" />
-                                                <label for="Password">Password</label>
+                                            <?php } ?>
+
+                                        <form method="post" action="<?php base_url().'login/index' ?>" name="loginForm" id="loginForm">
+                                            
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Username</label>
+                                                <input type="text" class="form-control" name="username" value="<?php echo set_value('username'); ?>">
+                                                <?php echo form_error('username'); ?>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                <input type="password" class="form-control" name="password">
+                                                <?php echo form_error('password'); ?>
                                             </div>
                                             
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                
-                                                <a class="btn btn-primary form-control" href="index.html">Login</a>
-                                            </div>
-                                        </form>
+                                            <button type="submit" name="submit" class="btn btn-primary form-control">Login</button>
+                                            </form>
                                     </div>
                                     
                                 </div>
