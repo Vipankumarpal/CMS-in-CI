@@ -13,7 +13,7 @@ $this->load->view('Admin/header');
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Appointments</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?php echo site_url().'/Admin/appointment'; ?>">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -22,7 +22,7 @@ $this->load->view('Admin/header');
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body">Patients</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?php echo site_url().'/Admin/viewPatient'; ?>">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

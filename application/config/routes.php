@@ -62,3 +62,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Login/index';
 $route['dashboard'] = 'Admin/dashboard';
 $route['appointment'] = 'Admin/appointment';
+$route['addPatient'] = 'Admin/addPatient';
+$route['viewPatient'] = 'Admin/viewPatient';

@@ -12,6 +12,17 @@
 			return $appointments;
 		}
 
+		function addPatient($formArray){
+
+			$this->db->insert('patients',$formArray);
+		}
+
+		function viewPatient(){
+			
+			$patients= $this->db->get('patients')->result_array();
+			return $patients;
+		}
+
 		
 	}
 ?>

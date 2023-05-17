@@ -55,8 +55,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Add patient</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">View patient</a>
+                                    <a class="nav-link" href="<?php echo site_url().'/Admin/addPatient'; ?>">Add patient</a>
+                                    <a class="nav-link" href="<?php echo site_url().'/Admin/viewPatient'; ?>">View patient</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

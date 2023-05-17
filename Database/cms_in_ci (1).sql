@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2023 at 03:07 PM
+-- Generation Time: May 17, 2023 at 03:08 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -52,6 +52,31 @@ INSERT INTO `appointments` (`appointment_id`, `name`, `email`, `contact`, `age`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `patients`
+--
+
+CREATE TABLE `patients` (
+  `patient_id` int(5) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `gender` varchar(150) NOT NULL,
+  `age` varchar(150) NOT NULL,
+  `contact` varchar(150) NOT NULL,
+  `address` text NOT NULL,
+  `reason_medician` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `patients`
+--
+
+INSERT INTO `patients` (`patient_id`, `name`, `gender`, `age`, `contact`, `address`, `reason_medician`) VALUES
+(6, 'vipan', 'male', '22', '7487446545', 'Ludhiana', 'cold, cough and fever...'),
+(7, 'John', 'male', '25', '987563215', 'USA', 'liver Infection'),
+(8, 'Liza', 'female', '26', '5454457454', 'Australia', 'headeck');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -79,6 +104,12 @@ ALTER TABLE `appointments`
   ADD PRIMARY KEY (`appointment_id`);
 
 --
+-- Indexes for table `patients`
+--
+ALTER TABLE `patients`
+  ADD PRIMARY KEY (`patient_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -93,6 +124,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `appointments`
   MODIFY `appointment_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `patients`
+--
+ALTER TABLE `patients`
+  MODIFY `patient_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
