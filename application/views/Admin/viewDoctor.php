@@ -4,7 +4,7 @@ $this->load->view('Admin/header');
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="my-4">Patients</h1>
+                        <h1 class="my-4">Doctors</h1>
                         
                        <?php $success = $this->session->userdata('success'); ?>
                             <?php if(!empty($success)){ ?>
@@ -18,18 +18,17 @@ $this->load->view('Admin/header');
 
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                All Patients
+                                All Doctors
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
-                                            <th>Gender</th>
+                                            <th>Designation</th>
                                             <th>Age</th>
-                                            <th>Contact</th>
-                                            <th>Address</th>
-                                            <th>Reason/Medician</th>
+                                            <th>Availability</th>
+                                            
                                             <th>Action</th>
 
                                         </tr>
@@ -37,25 +36,23 @@ $this->load->view('Admin/header');
                                     
 
                                     <tbody>
-                                        <?php if(!empty($patients)){ 
-                                    foreach ($patients as $patient){
+                                        <?php if(!empty($doctors)){ 
+                                    foreach ($doctors as $doctor){
 
-                                         // print_r($patient);  exit;
+                                         // print_r($doctor);  exit;
                                     ?>
                                         <tr>
-                                            <td><?php echo $patient['name']; ?></td>
-                                            <td><?php echo $patient['gender']; ?></td>
-                                            <td><?php echo $patient['age']; ?></td>
-                                            <td><?php echo $patient['contact']; ?></td>
+                                            <td><?php echo $doctor['name']; ?></td>
+                                            <td><?php echo $doctor['designation']; ?></td>
+                                            <td><?php echo $doctor['age']; ?></td>
+                                            <td><?php echo $doctor['availability']; ?></td>
                                             
-                                            <td><?php echo $patient['address']; ?></td>
-                                            <td><?php echo $patient['reason_medician']; ?></td>
+                                            
                                   <td>          
-                                <a href="<?php echo base_url().'Admin/editPatient'.$patient['patient_id']; ?>" class="text-light btn btn-dark"><i class="fas fa-edit me-1"></i></a> 
+                                <a href="#" class="text-light btn btn-dark"><i class="fas fa-edit me-1"></i></a> 
 
-                                <a onclick="return confirm('Are you sure to delete this?')" href="<?php echo base_url().'Admin/deletePatient'.$patient['patient_id']; ?>" class="text-light btn btn-danger"><i class="fas fa-trash me-1"></i></a>
+                                <a onclick="return confirm('Are you sure to delete this?')" href="#" class="text-light btn btn-danger"><i class="fas fa-trash me-1"></i></a>
                             </td>
-                            
                                             
                                         </tr>
                                         <?php } 

@@ -55,29 +55,24 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<?php echo site_url().'/Admin/addPatient'; ?>">Add patient</a>
-                                    <a class="nav-link" href="<?php echo site_url().'/Admin/viewPatient'; ?>">View patient</a>
+                                    <a class="nav-link" href="<?php echo site_url().'/Admin/addPatient'; ?>">Add Patient</a>
+                                    <a class="nav-link" href="<?php echo site_url().'/Admin/viewPatient'; ?>">View Patient</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Doctors
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Add Doctor
+
+                          <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                        Doctors
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        View Doctor
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                   
-                                </nav>
-                            </div>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="<?php echo site_url().'/Admin/addDoctor'; ?>">Add Doctor</a>
+                                            <a class="nav-link" href="<?php echo site_url().'/Admin/viewDoctor'; ?>">View Doctor</a>
+                                            
+                                        </nav>
+                                    </div>
+                            
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

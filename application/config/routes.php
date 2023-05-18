@@ -50,17 +50,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-
+// Front Routes start Here:
 $route['default_controller'] = 'Contact';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
-// Front Routes start Here:
-
 // Admin Panel Routes Start Here:
 $route['login'] = 'Login/index';
 $route['dashboard'] = 'Admin/dashboard';
 $route['appointment'] = 'Admin/appointment';
+
+// Patients Section
 $route['addPatient'] = 'Admin/addPatient';
 $route['viewPatient'] = 'Admin/viewPatient';
+$route['editPatient/(:num)'] = 'Admin/editPatient/$1';
+
+// Doctor Section
+$route['addDoctor'] = 'Admin/addDoctor';
+$route['viewDoctor'] = 'Admin/viewDoctor';
